@@ -1,0 +1,10 @@
+<view>
+  <view class="index-hd">
+    <image class="logo" src="logo.jpg"></image>
+    <view class="font1">京东商品评论分析</view>
+    <view class="index-desc">后端：程为、胡琪浩</view>
+    <view class="index-desc">前端：戴亚员</view>
+    <view class="index-desc">需求分析：陈汶檐</view>
+    <view class="index-desc"></view>
+  </view>
+</view>

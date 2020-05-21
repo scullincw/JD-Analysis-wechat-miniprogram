@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view bindtap="moreus">
+  <image class="moreus" src="../../images/gengduo.png"></image>
+</view>
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="search">
+      <view class="page-sanction">
+        <view class="weui-cells__title">京东商品网址:</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <input class="weui-input" name="url" type="text" confirm-type="search" auto-focus placeholder="输入商品链接" maxlength="-1"/>
+          </view>
+        </view>
+      </view>
+      <view class="page-sanction">
+        <view class="weui-cells__title">查询可能会需要一定的时间，请耐心等待。</view>
+        <button form-type="submit" loading="{{loading}}" hover-class="button-hover"> 查询
+        </button>
+        
+        <view class="fadeIn {{hideLoading ? 'fadeOut' : ''}}" wx:if="{{loading}}">
+          <view class="weui-mask_transparent"></view>
+          <view class="weui-toast">
+            <i class="weui-loading weui-icon_toast"></i>
+            <view class="weui-toast__content">正在查询并分析</view>
+          </view>
+        </view>
+
+        <view class="weui-footer weui-footer_fixed-bottom">
+          <view class="weui-footer__links">
+            <navigator url="/pages/illustrate/illustrate" class="weui-footer__link">使用说明</navigator>
+            <navigator url="/pages/aboutus/aboutus" class="weui-footer__link">关于我们</navigator>
+          </view>
+          <view class="weui-footer_text">Copyright © ZUELHUB</view>
+        </view>
+
+      </view>
+    </form>
+    
+  </view>
+</view>

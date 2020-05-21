@@ -1,0 +1,85 @@
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__bd">
+		<view class="weui-cells">
+			<view class="weui-cell weui-cell_active">
+				<view class="weui-cell__hd" style="position: relative; margin-right: 10px;">
+					<image src="{{imgUrl}}" style="width: 100px; height:100px; display: block;"></image>
+				</view>
+				<view class="weui-cell__bd">
+					<view class="item-full-name">{{itemName}}</view>
+					<view style="font-size: 15px; color: #888;">价格：￥{{price}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                        <view class="weui-uploader__hd">
+                          <view class="weui-uploader__overview">
+                              <view class="weui-uploader__title">商品评论词云图</view>
+                          </view>
+                          <view class="weui-uploader__tips">
+                            来源：{{shopName}}
+                          </view>
+                          <view class="weui-uploader__tips">
+                            分析评论数：{{commentsNum}}
+                          </view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                          <image src="{{ciyunUrl}}" style="heigt:350px;width:350px" />
+                        </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                        <view class="weui-uploader__hd">
+                          <view class="weui-uploader__overview">
+                              <view class="weui-uploader__title">商品评论情感分析</view>
+                          </view>
+                          <view class="weui-uploader__tips" id="buying-index">
+                            推荐购买指数：{{rating}}%
+                          </view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                          <!-- <image src="../../images/commentAnalyst.png" style="heigt:300px;width:350px" /> -->
+                          <view>部分评论</view>
+                          <view wx:for="{{comments}}" id="comments" style="margin-top: 5px; color: #888;">{{item}}</view>
+                        </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                      <view class="weui-uploader__hd">
+                        <view class="weui-uploader__overview">
+                            <button catchtap="change" wx:if="{{!isClick}}" size="{{primarySize}}" plain="{{plain}}" 
+                                disabled="{{disabled}}" type="warn"> 收藏商品
+                            </button>
+                            <button wx:else type="primary" size="{{primarySize}}" plain="{{plain}}" 
+                                disabled="{{disabled}}"> ✔︎ 收藏成功
+                            </button>
+                        </view>
+                      </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
